@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Boutique Açaí</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="container">
+        <img src="img/logo.jpg" alt="Logo Boutique Açaí" class="logo">
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+        <div class="auth-group">
+            <a href="login.html" class="btn-auth">Login</a>
+            <a href="cadastro.html" class="btn-auth">Cadastro</a>
+            <a href="carrinho.html" class="btn-auth">Carrinho</a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Pesquisar">
+        </div>
+    </header>
+
+    <div class="content">   
+        <h1>Fale Conosco</h1>
+        <p>Estamos aqui para ajudar! Entre em contato conosco para dúvidas, sugestões ou qualquer outra questão relacionada aos nossos produtos e serviços. Sua opinião é muito importante para nós!</p>
+    </div>
+
+    <!-- Formulário de contato -->
+    <div class="contact-form">
+        <form action="https://formspree.io/f/seu-id-aqui" method="post">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" class="btn-cta">Enviar Mensagem</button>
+        </form>
+    </div>
+
+    <div class="content">
+        <h2>Ou se preferir, chame no Whats!</h2>
+        <p>Atendimento rápido e personalizado.</p>
+        <a href="https://wa.me/5511999999999" target="_blank" class="btn-whatsapp">
+            Conversar no WhatsApp
+        </a>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2026 Boutique Açaí. Todos os direitos reservados.</p>
+    </div>
+</body>
+</html>

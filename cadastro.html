@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Boutique Açaí</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>  
+    
+    <header class="container">
+        <img src="img/logo.jpg" alt="Logo Boutique Açaí" class="logo">
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+        <div class="auth-group">
+            <a href="login.html" class="btn-auth">Login</a>
+            <a href="cadastro.html" class="btn-auth">Cadastro</a>
+            <a href="carrinho.html" class="btn-auth">Carrinho</a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Pesquisar">
+        </div>
+    </header>
+
+    <div class="content">   
+        <h1>Cadastro</h1>
+        <p>Preencha o formulário abaixo para criar sua conta na Boutique Açaí!</p>
+        <form class="login-form">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" required>
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required>
+            
+            <label for="confirmar-senha">Confirmar Senha</label>
+            <input type="password" id="confirmar-senha" name="confirmar-senha" required>
+            
+            <button type="submit" class="btn-cta">Cadastrar</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2026 Boutique Açaí. Todos os direitos reservados.</p>
+    </div>
+</body>
+</html>
