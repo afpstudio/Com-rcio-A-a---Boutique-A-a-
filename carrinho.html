@@ -1,50 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Carrinho - Boutique Açaí</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrinho - Boutique Açaí</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+  <script src="JS/script.js" defer></script>
 </head>
 <body>
-    <header class="container">
-        <img src="img/logo.jpg" alt="Logo Boutique Açaí" class="logo">
-        <nav class="menu">
-            <a href="index.html">Home</a>
-            <a href="cardapio.html">Cardápio</a>
-            <a href="contato.html">Contato</a>
-        </nav>
-        <div class="auth-group">
-            <a href="login.html" class="btn-auth">Login</a>
-            <a href="cadastro.html" class="btn-auth">Cadastro</a>
-            <a href="carrinho.html" class="btn-auth">Carrinho</a>
-        </div>
-    </header>
+  <header class="container">
+    <img src="img/logo.png" alt="Logo Boutique Açaí" class="logo" />
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <div class="auth-group">
+      <a href="carrinho.html" class="btn-auth">Carrinho</a>
+    </div>
+    <div class="search">
+      <input type="text" placeholder="Pesquisar" />
+    </div>
+  </header>
 
+  <section class="destaques" aria-label="Seu carrinho">
     <div class="content">
-        <h1>Seu Carrinho</h1>
-        <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; margin-bottom: 30px;">
-            <p>Seu carrinho está pronto para ser finalizado!</p>
-            <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 20px 0;">
-            <h3>Total Estimado: R$ 0,00</h3>
+      <h1 style="text-align:center; color: var(--roxo-escuro); margin: 10px 0 20px;">Seu carrinho</h1>
+      <div class="order-actions" style="text-align:center; max-width: 900px; margin: 0 auto;">
+        <div style="margin: 0 auto; max-width: 600px;"> 
+          <!-- renderCart() vai preencher este conteúdo -->
         </div>
 
-        <div class="order-actions" style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
-            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de finalizar meu pedido de açaí." 
-               target="_blank" 
-               class="btn-whatsapp">
-                Finalizar Pedido pelo WhatsApp
-            </a>
-            
-            <a href="cardapio.html" style="color: #d1b3ff; text-decoration: none;">
-                ← Continuar Comprando
-            </a>
-        </div>
+        <a class="btn-cta btn-whatsapp" style="display:none; margin-top: 18px;" href="#" target="_blank" rel="noopener">
+          Finalizar via WhatsApp
+        </a>
+      </div>
     </div>
+  </section>
 
-    <div class="footer">
-        <p>&copy; 2026 Boutique Açaí. Todos os direitos reservados.</p>
-    </div>
+  <div class="footer">
+    <p>&copy; 2026 Boutique Açaí. Todos os direitos reservados.</p>
+  </div>
+
 </body>
 </html>
+
+
