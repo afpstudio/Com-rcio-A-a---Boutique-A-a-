@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produtos em Destaque - Boutique Açaí</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body>
+  <header class="container">
+    <img src="img/logo.png" alt="Logo Boutique Açaí" class="logo" />
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <div class="auth-group">
+      <a href="carrinho.html" class="btn-auth">Carrinho</a>
+    </div>
+    <div class="search">
+      <input type="text" placeholder="Pesquisar" />
+    </div>
+  </header>
+
+  <div class="content">
+    <h1 style="text-align:center; color: var(--roxo-escuro); margin: 10px 0 20px;">Produtos em Destaque</h1>
+    <p style="text-align:center; max-width: 900px; margin: 0 auto 26px;">
+      Selecione seus sabores favoritos e monte seu pedido com os melhores acompanhamentos.
+    </p>
+  </div>
+
+  <section class="destaques" aria-label="Produtos em destaque">
+    <h3 style="margin-bottom: 18px;">Nossos Destaques</h3>
+
+    <div class="cards">
+      <article class="card" data-produto="tradicional" role="button" tabindex="0" aria-label="Ver descrição do Açaí Tradicional">
+        <img src="img/acai-tradicional.jpg" alt="Açaí Tradicional" />
+        <h4>Açaí Tradicional</h4>
+      </article>
+      <article class="card" data-produto="frutas" role="button" tabindex="0" aria-label="Ver descrição do Açaí com Frutas">
+        <img src="img/acai-frutas.jpg" alt="Açaí com Frutas" />
+        <h4>Açaí com Frutas</h4>
+      </article>
+      <article class="card" data-produto="granola" role="button" tabindex="0" aria-label="Ver descrição do Açaí com Granola">
+        <img src="img/acai-granola.jpg" alt="Açaí com Granola" />
+        <h4>Açaí com Granola</h4>
+      </article>
+      <article class="card" data-produto="morango" role="button" tabindex="0" aria-label="Ver descrição do Açaí com Morango">
+        <img src="img/acai-morango.jpg" alt="Açaí com Morango" />
+        <h4>Açaí com Morango</h4>
+      </article>
+      <article class="card" data-produto="pistache" role="button" tabindex="0" aria-label="Ver descrição do Açaí com Pistache">
+        <img src="img/acai-pistache.jpg" alt="Açaí com Pistache" />
+        <h4>Açaí com Pistache</h4>
+      </article>
+      <article class="card" data-produto="chocolate" role="button" tabindex="0" aria-label="Ver descrição do Açaí com Chocolate">
+        <img src="img/acai-chocolate.jpg" alt="Açaí com Chocolate" />
+        <h4>Açaí com Chocolate</h4>
+      </article>
+    </div>
+
+    <div class="produto-detalhe" aria-live="polite">
+      <h3>Descrição</h3>
+      <p class="produto-nome">Clique em um card para ver a descrição.</p>
+      <p class="produto-texto"></p>
+    </div>
+  </section>
+
+
+  <div class="footer">
+    <p>&copy; 2026 Boutique Açaí. Todos os direitos reservados.</p>
+  </div>
+
+  <script>
+    const produtos = {
+      tradicional: {
+        nome: 'Açaí Tradicional',
+        descricao: 'O clássico da casa: cremoso, sabor marcante e perfeito para quem ama o equilíbrio entre doçura e acidez.'
+      },
+      frutas: {
+        nome: 'Açaí com Frutas',
+        descricao: 'Mistura refrescante de frutas selecionadas para deixar seu açaí ainda mais leve, colorido e delicioso.'
+      },
+      granola: {
+        nome: 'Açaí com Granola',
+        descricao: 'Textura crocante + cremosidade: granola na medida para um sabor irresistível a cada colherada.'
+      },
+      morango: {
+        nome: 'Açaí com Morango',
+        descricao: 'Combinação perfeita para os fãs de sabor frutado: morango, cremosidade e muita energia.'
+      },
+      pistache: {
+        nome: 'Açaí com Pistache',
+        descricao: 'Um toque sofisticado: pistache para trazer aroma e crocância com aquele sabor único.'
+      },
+      chocolate: {
+        nome: 'Açaí com Chocolate',
+        descricao: 'Doçura na medida com sabor intenso: uma opção clássica para adoçar do jeito certo.'
+      }
+    };
+
+    const cards = document.querySelectorAll('.card[data-produto]');
+    const nomeEl = document.querySelector('.produto-nome');
+    const textoEl = document.querySelector('.produto-texto');
+
+    function mostrarDetalhe(produtoKey){
+      const p = produtos[produtoKey];
+      if(!p) return;
+      nomeEl.textContent = p.nome;
+      textoEl.textContent = p.descricao;
+    }
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => mostrarDetalhe(card.dataset.produto));
+      card.addEventListener('keydown', (e) => {
+        if(e.key === 'Enter' || e.key === ' '){
+          e.preventDefault();
+          mostrarDetalhe(card.dataset.produto);
+        }
+      });
+    });
+  </script>
+
+  <script src="JS/script.js" defer></script>
+</body>
+</html>
+
+

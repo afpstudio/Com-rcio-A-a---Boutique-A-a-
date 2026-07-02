@@ -4,22 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boutique Açaí</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/script.js" defer></script>
   
 </head>
 <body> 
 
     <header class="container">
-        <img src="img/logo.jpg" alt="Logo Boutique Açaí" class="logo">
+        <img src="img/logo.png" alt="Logo Boutique Açaí" class="logo">
         <nav class="menu">
             <a href="index.html">Home</a>
             <a href="cardapio.html">Cardápio</a>
             <a href="contato.html">Contato</a>
         </nav>
         <div class="auth-group">
-            <a href="login.html" class="btn-auth">Login</a>
-            <a href="cadastro.html" class="btn-auth">Cadastro</a>
             <a href="carrinho.html" class="btn-auth">Carrinho</a>
         </div>
         <div class="search">
@@ -28,14 +26,49 @@
     </header>
 
     <div class="banner">
-        <h2>O Açaí Mais Gostoso da Cidade</h2>
-        <p>Artesanal, Premium e com os melhores acompanhamentos.</p>
-        <a href="cardapio.html" class="btn-cta">Peça Agora</a>
+        <img class="banner-img" src="img/fundo-banner.jpg" alt="Boutique Açaí">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <h2>O Açaí Mais Gostoso da Cidade</h2>
+            <p>Artesanal, Premium e com os melhores acompanhamentos.</p>
+            <a href="cardapio.html" class="btn-cta">Peça Agora</a>
+        </div>
     </div>
 
     <div class="content">
         <p>Descubra o sabor único do nosso açaí, preparado com ingredientes frescos e de alta qualidade. Venha experimentar nossas deliciosas opções de açaí, acompanhamentos e muito mais!</p>
     </div>
+
+    <section class="destaques" aria-label="Destaques">
+        <h3>Nossos Destaques</h3>
+        <div class="cards">
+            <article class="card">
+                <img src="img/acai-tradicional.jpg" alt="Açaí Tradicional">
+                <h4>Açaí Tradicional</h4>
+            </article>
+            <article class="card">
+                <img src="img/acai-frutas.jpg" alt="Açaí com Frutas">
+                <h4>Açaí com Frutas</h4>
+            </article>
+            <article class="card">
+                <img src="img/acai-granola.jpg" alt="Açaí com Granola">
+                <h4>Açaí com Granola</h4>
+            </article>
+            <article class="card">
+                <img src="img/acai-morango.jpg" alt="Açaí com Morango">
+                <h4>Açaí com Morango</h4>
+            </article>
+            <article class="card">
+                <img src="img/acai-pistache.jpg" alt="Açaí com Pistache">
+                <h4>Açaí com Pistache</h4>
+            </article>
+            <article class="card">
+                <img src="img/acai-chocolate.jpg" alt="Açaí com Chocolate">
+                <h4>Açaí com Chocolate</h4>
+            </article>
+        </div>
+    </section>
+
     <div class="footer">
         <p>&copy; 2026 Boutique Açaí. Todos os direitos reservados.</p>
     </div>

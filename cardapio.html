@@ -3,22 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardápio - Boutique Açaí</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>Cardápio</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
-<body>  
-    
+<body>
     <header class="container">
-        <img src="img/logo.jpg" alt="Logo Boutique Açaí" class="logo">
+        <img src="img/logo.png" alt="Logo Boutique Açaí" class="logo">
         <nav class="menu">
             <a href="index.html">Home</a>
             <a href="cardapio.html">Cardápio</a>
             <a href="contato.html">Contato</a>
         </nav>
         <div class="auth-group">
-            <a href="login.html" class="btn-auth">Login</a>
-            <a href="cadastro.html" class="btn-auth">Cadastro</a>
             <a href="carrinho.html" class="btn-auth">Carrinho</a>
         </div>
         <div class="search">
@@ -26,67 +22,78 @@
         </div>
     </header>
 
-    <div class="content">   
-        <h1>Nosso Cardápio</h1>
-        <p>Explore nossas deliciosas opções de açaí, acompanhamentos e muito mais!</p>
+    <div class="content">
+        <h1 style="text-align:center; color: var(--roxo-escuro); margin: 10px 0 20px;">Cardápio</h1>
+        <p style="text-align:center; max-width: 900px; margin: 0 auto 26px;">
+            Selecione seus sabores favoritos e clique em <strong>Adicionar ao carrinho</strong>.
+        </p>
     </div>
-    <div class="products">
-        <div class="product-item">
-            <img src="img/acai-tradicional.jpg" alt="Açaí Tradicional" class="product-image">
-            <h3>Açaí Tradicional</h3>
-            <p>Açaí puro, cremoso e refrescante, perfeito para os amantes do sabor original.</p>
-            <valor>R$ 15,00</valor>
-            <button class="btn-auth">Adicionar no Carrinho</button>
-            <button class="btn-cta">Comprar</button>
 
-        </div>
-        <div class="product-item">
-            <img src="img/acai-morango.jpg" alt="Açaí com Morango" class="product-image">
-            <h3>Açaí com Morango</h3>
-            <p>Combinação deliciosa de açaí com morangos frescos, ideal para quem gosta de um toque frutado.</p>
-            <valor>R$ 18,00</valor>
-            <button class="btn-auth">Adicionar no Carrinho</button>
-            <button class="btn-cta">Comprar</button>
-        </div>
-        <div class="product-item">
-            <img src="img/acai-granola.jpg" alt="Açaí com Granola" class="product-image">
-            <h3>Açaí com Granola</h3>
-            <p>Açaí servido com granola crocante, proporcionando uma textura incrível e sabor irresistível.</p>
-            <valor>R$ 20,00</valor>
-            <button class="btn-auth">Adicionar no Carrinho</button>
-            <button class="btn-cta">Comprar</button>    
-        </div>
-        <div class="product-item">
-            <img src="img/acai-frutas.jpg" alt="Açaí com Frutas" class="product-image">
-            <h3>Açaí com Frutas</h3>
-            <p>Açaí acompanhado de uma variedade de frutas frescas, perfeito para quem busca um sabor mais leve e refrescante.</p>
-            <valor>R$ 22,00</valor>
-            <button class="btn-auth">Adicionar no Carrinho</button>
-            <button class="btn-cta">Comprar</button>
-        </div>  
-        <div class="product-item">
-            <img src="img/acai-chocolate.jpg" alt="Açaí com Chocolate" class="product-image">
-            <h3>Açaí com Chocolate</h3>
-            <p>Açaí combinado com calda de chocolate, uma opção irresistível para os amantes de doces.</p>
-            <valor>R$ 25,00</valor>
-            <button class="btn-auth">Adicionar no Carrinho</button>
-            <button class="btn-cta">Comprar</button>
-        </div>
-        <div class="product-item">
-            <img src="img/acai-pistache.jpg" alt="Açaí com Pistache" class="product-image">
-            <h3>Açaí com Pistache</h3>  
-            <p>Açaí servido com pedaços de pistache, oferecendo um sabor único e uma textura crocante.</p>
-            <valor>R$ 27,00</valor>
-            <button class="btn-auth">Adicionar no Carrinho</button>
-            <button class="btn-cta">Comprar</button>
-        </div>
-        
+    <section class="destaques" aria-label="Produtos no cardápio">
+        <h3 style="margin-bottom: 18px;">Nossos Produtos</h3>
 
-    
-        <!-- Adicione mais produtos conforme necessário -->
-    </div>
+        <div class="cards">
+            <article class="card product-item">
+                <img src="img/acai-tradicional.jpg" alt="Açaí Tradicional">
+                <h4 class="product-title">Açaí Tradicional</h4>
+                <div class="product-meta">
+                    <span class="product-price">R$ 18,00</span>
+                    <button class="btn-add" type="button" onclick="addToCart('Açaí Tradicional', 18.00)">Adicionar ao carrinho</button>
+                </div>
+            </article>
+
+            <article class="card product-item">
+                <img src="img/acai-frutas.jpg" alt="Açaí com Frutas">
+                <h4 class="product-title">Açaí com Frutas</h4>
+                <div class="product-meta">
+                    <span class="product-price">R$ 22,00</span>
+                    <button class="btn-add" type="button" onclick="addToCart('Açaí com Frutas', 22.00)">Adicionar ao carrinho</button>
+                </div>
+            </article>
+
+            <article class="card product-item">
+                <img src="img/acai-granola.jpg" alt="Açaí com Granola">
+                <h4 class="product-title">Açaí com Granola</h4>
+                <div class="product-meta">
+                    <span class="product-price">R$ 21,00</span>
+                    <button class="btn-add" type="button" onclick="addToCart('Açaí com Granola', 21.00)">Adicionar ao carrinho</button>
+                </div>
+            </article>
+
+            <article class="card product-item">
+                <img src="img/acai-morango.jpg" alt="Açaí com Morango">
+                <h4 class="product-title">Açaí com Morango</h4>
+                <div class="product-meta">
+                    <span class="product-price">R$ 23,00</span>
+                    <button class="btn-add" type="button" onclick="addToCart('Açaí com Morango', 23.00)">Adicionar ao carrinho</button>
+                </div>
+            </article>
+
+            <article class="card product-item">
+                <img src="img/acai-pistache.jpg" alt="Açaí com Pistache">
+                <h4 class="product-title">Açaí com Pistache</h4>
+                <div class="product-meta">
+                    <span class="product-price">R$ 24,00</span>
+                    <button class="btn-add" type="button" onclick="addToCart('Açaí com Pistache', 24.00)">Adicionar ao carrinho</button>
+                </div>
+            </article>
+
+            <article class="card product-item">
+                <img src="img/acai-chocolate.jpg" alt="Açaí com Chocolate">
+                <h4 class="product-title">Açaí com Chocolate</h4>
+                <div class="product-meta">
+                    <span class="product-price">R$ 25,00</span>
+                    <button class="btn-add" type="button" onclick="addToCart('Açaí com Chocolate', 25.00)">Adicionar ao carrinho</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
     <div class="footer">
         <p>&copy; 2026 Boutique Açaí. Todos os direitos reservados.</p>
     </div>
+
+    <script src="JS/script.js" defer></script>
 </body>
-</html> 
+</html>
+
